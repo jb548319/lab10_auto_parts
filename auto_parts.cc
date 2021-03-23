@@ -13,16 +13,43 @@
 
 using namespace std;
 
+/**
+ * Loads prices file into a vector
+ * @return vector that has the prices data
+*/
 vector <double> loadPrices ();
 
+/**
+ * Loads parts file into a vector
+ * @return vector that has the parts data
+*/
 vector <string> loadParts ();
 
+/**
+ * Gets input file name
+ * @return string of input file
+*/
 string inputFile ();
 
+/**
+ * Opens up input file
+ * @param input_file string for file name
+ * @param ins inStream reference variable
+*/
 void openFile (string input_file, ifstream &ins);
 
+/**
+ * Gets the vector index for most expensive part
+ * @param prices vector that this function loops through
+ * @return the index of most expensive part
+*/
 size_t highPrice (vector <double> prices);
 
+/**
+ * Gets the vector index for least expensive part
+ * @param prices vector that this function loops through
+ * @return the index of least expensive part
+*/
 size_t lowPrice (vector <double> prices);
 
 int main(int argc, char const *argv[]) {
